@@ -21,13 +21,13 @@ y4 = sinWave(t_axis,13,6)
 y = y1 + y2 + y3 + y4
 
 yf = abs(np.fft.fft(y))
-# yfs = np.fft.fftshift(yf)     	## shift 0 frequency to middle
-                                	## [0,1,2,3,4,-4,-3,-2,-1] -> [-4,-3,-2,-1,0,1,2,3,4]
+# yfs = np.fft.fftshift(yf)         ## shift 0 frequency to middle
+                                    ## [0,1,2,3,4,-4,-3,-2,-1] -> [-4,-3,-2,-1,0,1,2,3,4]
                                     ##                 (0, fs) -> (-fs/2, fs/2)
-                                	## just plot the positive frequency, so dont need to shift
+                                    ## just plot the positive frequency, so dont need to shift
 
-yfn = yf * 2 / N		        	## normalization
-									## let the amplitude of output signal equals to inputs
+yfn = yf * 2 / N                    ## normalization
+                                    ## let the amplitude of output signal equals to inputs
 
 plt.figure('Title', figsize=(6,6))
 
