@@ -52,15 +52,16 @@ df 變一半表示頻率解析度變高。
 ## numpy fft 用法
 
 ```python
-X_f = abs(np.fft.fftshift(np.fft.fft(x_t)))
+X_f = abs(np.fft.fftshift(np.fft.fft(x_t)))/N
 ```
 
 *   `fft`: 做 fft。input, output array 長度皆為 N，output 頻率範圍為 (0, fs)
 *   `fftshift`: 搬一下 frequency domain 訊號。 (0, fs) -> (-fs/2, fs/2)
 *   `abs`: 原始運算完為複數，加了絕對值轉為實數。
+*   `/N`: FFT運算完大小會是錯的，所以要除以訊號長度。
 
 
 ## Links
-1.  上面那張圖的 [source code](src/fft_np_drawfig.py)
-2.  fft 範例 [source code](src/fft_np.py)
+1.  fft 範例 [source code](src/fft_np.py)
+2.  上面那張圖的 [source code](src/fft_np_drawfig.py)
 
