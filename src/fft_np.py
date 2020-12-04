@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.signal import find_peaks
+# from scipy.signal import find_peaks
 
 def sinWave(t_axis, freq, amp):
     return amp * np.sin(2*np.pi*freq*t_axis)
@@ -26,7 +26,7 @@ yf = abs(np.fft.fft(y))
                                     ##                 (0, fs) -> (-fs/2, fs/2)
                                     ## just plot the positive frequency, so dont need to shift
 
-yfn = yf * 2 / N                    ## normalization
+yfn = yf / N                        ## normalization
                                     ## let the amplitude of output signal equals to inputs
 
 plt.figure('Title', figsize=(6,6))
@@ -56,8 +56,8 @@ maxFreqIndex = int(maxFreq/df)
 
 plt.plot(f_axis[:maxFreqIndex],yfn[:maxFreqIndex],'r')
 
-peaks, _ = find_peaks(yfn[:maxFreqIndex], height = 1)
-plt.plot(peaks*df, yfn[peaks], 'x')
+# peaks, _ = find_peaks(yfn[:maxFreqIndex], height = 1)
+# plt.plot(peaks*df, yfn[peaks], 'x')
 
 ybegin,yend = plt.ylim()
 plt.yticks(range(int(ybegin),int(yend)+1,1))
