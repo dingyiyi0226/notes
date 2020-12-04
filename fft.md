@@ -59,7 +59,7 @@ X_f = abs(np.fft.fftshift(np.fft.fft(x_t)))/N
 *   `fft`: 做 fft。input, output array 長度皆為 N，output 頻率範圍為 (0, fs)
 *   `fftshift`: 搬一下 frequency domain 訊號。 (0, fs) -> (-fs/2, fs/2)
 *   `abs`: 原始運算完為複數，加了絕對值轉為實數。
-*   `/N`: FFT運算完大小會是錯的，所以要除以訊號長度。
+*   `/N`: FFT運算完振幅大小會是錯的，所以要除以訊號長度。
 
 
 ## Links
