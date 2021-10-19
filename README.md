@@ -2,4 +2,4 @@
 
 1.  [FFT](fft.md)
 2.  [VNC](vnc.md)
-3.  [Virual box](virtualbox.md)
+3.  [Virtual box](virtualbox.md)
