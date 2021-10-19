@@ -25,10 +25,19 @@ vboxmanage list runningvms
 
 
 ```shell
-vboxmanage startvm <vm> [gui|headless]                    # default: gui
-vboxmanage controlvm <vm> <acpipowerbutton|poweroff>      # recommend: acpipowerbutton
+vboxmanage startvm <vm> [--type gui|headless]           # default: gui
+vboxmanage controlvm <vm> <acpipowerbutton|poweroff>    # recommend: acpipowerbutton
 
 ```
 
 [Reference Page](https://www.virtualbox.org/manual/ch08.html)
 
+### VM Infos
+
+You may need to install virtualbox extension pack from website.
+
+```shell
+vboxmanage guestproperty enumerate <vm>
+vboxmanage guestproperty get <vm> <property>
+
+```
