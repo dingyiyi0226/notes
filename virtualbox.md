@@ -2,6 +2,8 @@
 
 ## Networking
 
+[a good blog](https://blogs.oracle.com/scoter/post/oracle-vm-virtualbox-networking-options-and-how-to-manage-them)
+
 -   When you want to create a vm in your host, choose NAT + Host-only network. NAT network for accessing the internet, Host-only network for accessing from your host.
 
 -   When you want to create a vm on your lan, choose bridged network.
