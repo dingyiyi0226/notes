@@ -27,3 +27,40 @@
 
 see [Documentation](https://wiki.archlinux.org/title/TigerVNC)
 
+### xvnc
+
+Start a session by `vncserver -rfbport 5903`
+
+Close this session by `vncserver -kill :3`
+
+
+### x0vncserver
+
+Put the service file at `~/.config/systemd/user/x0vncserver.service`
+
+Start this service by `systemctl --user start x0vncserver`
+
+Autostart this service at login by `systemctl --user enable x0vncserver`
+
+#### Service file
+
+-  `-display`: display number, normally :0
+-  `-rfbauth`: password file
+-  `-rfbport`: service port
+
+```shell
+[Unit]
+Description=Remote desktop service (VNC)
+
+[Service]
+Type=simple
+# wait for Xorg started by ${USER}
+ExecStartPre=/bin/sh -c 'while ! pgrep -U "$USER" Xorg; do sleep 2; done'
+ExecStart=/usr/bin/x0vncserver -display :0 -rfbauth %h/.vnc/passwd -rfbport 5903
+# or login with your username & password
+#ExecStart=/usr/bin/x0vncserver -PAMService=login -PlainUsers=${USER} -SecurityTypes=TLSPlain
+
+[Install]
+WantedBy=default.target
+
+```
