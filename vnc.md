@@ -25,9 +25,15 @@
 
 ## Usage
 
-see [Documentation](https://wiki.archlinux.org/title/TigerVNC)
+See [Documentation](https://wiki.archlinux.org/title/TigerVNC)
+
+The usage on Ubuntu
+-  Global configuration: `/etc/vnc.conf`
+-  Custom configuration: `~/.vnc/vnc.conf`
 
 ### xvnc
+
+Set `$localhost = "no"` in custom configuration
 
 Start a session by `vncserver -rfbport 5903`
 
