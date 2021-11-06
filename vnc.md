@@ -27,7 +27,7 @@
 
 See [Documentation](https://wiki.archlinux.org/title/TigerVNC)
 
-The usage on Ubuntu
+The usage on [Ubuntu](http://manpages.ubuntu.com/manpages/focal/en/man5/vnc.conf.5x.html)
 -  Global configuration: `/etc/vnc.conf`
 -  Custom configuration: `~/.vnc/vnc.conf`
 
