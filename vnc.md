@@ -37,10 +37,18 @@ Set `$localhost = "no"` in custom configuration
 
 Start a session by `vncserver -rfbport 5903`
 
+List all sessions by `vncserver -list`
+
 Close this session by `vncserver -kill :3`
 
 
 ### x0vncserver
+
+#### Start session in shell
+
+Start a session by `x0vncserver -display :0 -rfbauth ~/.vnc/passwd -rfbport 5903`
+
+#### Start session by service file
 
 Put the service file at `~/.config/systemd/user/x0vncserver.service`
 
@@ -48,7 +56,7 @@ Start this service by `systemctl --user start x0vncserver`
 
 Autostart this service at login by `systemctl --user enable x0vncserver`
 
-#### Service file
+##### Service file
 
 -  `-display`: display number, normally :0
 -  `-rfbauth`: password file
