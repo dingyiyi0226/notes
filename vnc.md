@@ -31,6 +31,9 @@ The usage on [Ubuntu](http://manpages.ubuntu.com/manpages/focal/en/man5/vnc.conf
 -  Global configuration: `/etc/vnc.conf`
 -  Custom configuration: `~/.vnc/vnc.conf`
 
+1. Set the vnc password by `vncpasswd`
+2. Follow the instructions below
+
 ### xvnc
 
 Set `$localhost = "no"` in custom configuration
