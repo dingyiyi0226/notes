@@ -25,18 +25,12 @@
 
 ## Usage
 
-See [Documentation](https://wiki.archlinux.org/title/TigerVNC)
-
-The usage on [Ubuntu](http://manpages.ubuntu.com/manpages/focal/en/man5/vnc.conf.5x.html)
--  Global configuration: `/etc/vnc.conf`
--  Custom configuration: `~/.vnc/vnc.conf`
-
 1. Set the vnc password by `vncpasswd`
 2. Follow the instructions below
 
 ### xvnc
 
-Set `$localhost = "no"` in custom configuration
+Set `$localhost = "no"` in [custom configuration](#configuration)
 
 Start a session by `vncserver -rfbport 5903`
 
@@ -59,7 +53,7 @@ Start this service by `systemctl --user start x0vncserver`
 
 Autostart this service at login by `systemctl --user enable x0vncserver`
 
-##### Service file
+#### Service file
 
 -  `-display`: display number, normally :0
 -  `-rfbauth`: password file
@@ -81,3 +75,13 @@ ExecStart=/usr/bin/x0vncserver -display :0 -rfbauth %h/.vnc/passwd -rfbport 5903
 WantedBy=default.target
 
 ```
+
+## Configuration
+
+-  Global configuration: `/etc/vnc.conf`
+-  Custom configuration: `~/.vnc/vnc.conf`
+
+## Documentation
+
+- [TigerVNC](https://wiki.archlinux.org/title/TigerVNC)
+- [Ubuntu](http://manpages.ubuntu.com/manpages/focal/en/man5/vnc.conf.5x.html)
