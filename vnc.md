@@ -41,6 +41,8 @@ Close this session by `vncserver -kill :3`
 
 ### x0vncserver
 
+You can start the session either in shell or by a service file
+
 #### Start session in shell
 
 Start a session by `x0vncserver -display :0 -rfbauth ~/.vnc/passwd -rfbport 5903`
