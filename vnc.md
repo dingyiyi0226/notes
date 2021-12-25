@@ -87,3 +87,27 @@ WantedBy=default.target
 
 - [TigerVNC](https://wiki.archlinux.org/title/TigerVNC)
 - [Ubuntu](http://manpages.ubuntu.com/manpages/focal/en/man5/vnc.conf.5x.html)
+
+## Issues
+
+### Authentication is required to create a color profile
+
+Add this file `/etc/polkit-1/localauthority.conf.d/02-allow-colord.conf` and set owner root:root, mod 644
+
+```js
+polkit.addRule(function(action, subject) {
+  if ((action.id == "org.freedesktop.color-manager.create-device"  ||
+       action.id == "org.freedesktop.color-manager.create-profile" ||
+       action.id == "org.freedesktop.color-manager.delete-device"  ||
+       action.id == "org.freedesktop.color-manager.delete-profile" ||
+       action.id == "org.freedesktop.color-manager.modify-device"  ||
+       action.id == "org.freedesktop.color-manager.modify-profile"
+      )
+     )
+  {
+    return polkit.Result.YES;
+  }
+});
+```
+
+[Reference](https://askubuntu.com/questions/1033390/ubuntu-18-04-tigervnc-authentication-is-required-to-create-a-color-profile)
