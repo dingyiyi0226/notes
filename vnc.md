@@ -1,16 +1,19 @@
 # VNC
 
-使用 [tigervnc](https://tigervnc.org)
+This is a tutorial of  [tigervnc](https://tigervnc.org)
 
 ## Process
 
-### xvnc
-沒有連接螢幕(headless)的時候用這個
+You cant't use xvnc and x0vncserver simultaneously.
 
-如果想接螢幕必須把這個process砍掉才能用
+### xvnc
+Used in headless mode (沒有連接螢幕)
+
+If you need to connect to the monitor, you must kill this process.
 
 ### x0vncserver
-當有連接螢幕的時候用這個
+Control your physical monitor directly.
+
 
 ## Install
 
