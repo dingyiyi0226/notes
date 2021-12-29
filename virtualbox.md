@@ -8,7 +8,7 @@
 
 -   When you want to create a vm on your lan, choose bridged network.
 
-<img src="img/virtualbox_network.png" alt="vbox network" width="800"/>
+<img src="https://raw.githubusercontent.com/dingyiyi0226/notes/master/img/virtualbox_network.png" alt="vbox network" width="800"/>
 
 [Reference Page](https://www.virtualbox.org/manual/ch06.html)
 
