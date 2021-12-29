@@ -3,7 +3,7 @@
 
 ## 參數定義
 
-![Signal](img/fft_Signal.png)
+![Signal](https://raw.githubusercontent.com/dingyiyi0226/notes/master/img/fft_Signal.png)
 
 *   x(t) <--> X(f)
 *   sampling rate/frequency: fs
@@ -63,6 +63,6 @@ X_f = abs(np.fft.fftshift(np.fft.fft(x_t)))/N
 
 
 ## Links
-1.  fft 範例 [source code](src/fft_np.py)
-2.  上面那張圖的 [source code](src/fft_np_drawfig.py)
+1.  fft 範例 [source code](https://github.com/dingyiyi0226/notes/blob/master/src/fft_np.py)
+2.  上面那張圖的 [source code](https://github.com/dingyiyi0226/notes/blob/master/src/fft_np_drawfig.py)
 
