@@ -9,13 +9,11 @@ echo "user:password" | sudo chpasswd     # in shell script
 
 usermod user -aG sudo           
 userdel user
-
 ```
 
 ```shell
 who        # show all login users
 whoami     # show my username
-
 ```
 
 
@@ -23,7 +21,6 @@ whoami     # show my username
 ```shell
 su -        # change to root
 su - user
-
 ```
 
 ## Group
@@ -35,7 +32,6 @@ groupdel group
 gpasswd group [-a|-d] user    # add/delete user from a group
 
 groups user    # print the groups a user is in
-
 ```
 
 ## Example usage
