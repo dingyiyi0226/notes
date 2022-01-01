@@ -52,7 +52,8 @@ Start a session by `x0vncserver -display :0 -rfbauth ~/.vnc/passwd -rfbport 5903
 
 #### Start session by service file
 
-Put the service file at `~/.config/systemd/user/x0vncserver.service`
+Create the service file by `systemctl edit --user --force --full x0vncserver.service`  
+or simply create the file at `~/.config/systemd/user/x0vncserver.service`
 
 Start this service by `systemctl --user start x0vncserver`
 
