@@ -8,7 +8,7 @@ passwd user                              # interactively
 echo "user:password" | sudo chpasswd     # in shell script
 
 usermod user -aG sudo           
-userdel user
+userdel -r user    # -r for remove all directory related to user
 ```
 
 ```shell
