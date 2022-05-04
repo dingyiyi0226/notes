@@ -15,7 +15,9 @@
 
 ## Vboxmanage Usage
 
-### List VMs
+[Reference Page](https://www.virtualbox.org/manual/ch08.html)
+
+### List VM
 
 ```shell
 vboxmanage list vms
@@ -23,8 +25,7 @@ vboxmanage list runningvms
 
 ```
 
-### Control VMs
-
+### Control VM
 
 ```shell
 vboxmanage startvm <vm> [--type gui|headless]           # default: gui
@@ -32,7 +33,23 @@ vboxmanage controlvm <vm> <acpipowerbutton|poweroff>    # recommend: acpipowerbu
 
 ```
 
-[Reference Page](https://www.virtualbox.org/manual/ch08.html)
+### Import VM
+
+```shell
+vboxmanage import vm_image/ubuntu-desktop.ova --vsys 0 --vmname <vm> [--dry-run]
+```
+
+### Delete VM
+
+```shell
+vboxmanage unregistervm <vm> --delete
+```
+
+### Modify VM
+
+```shell
+vboxmanage modifyvm <vm> --nic1 bridged --bridgeadapter1 eno1  # change nic1 to bridged mode and to eno1 interface
+```
 
 ### VM Infos
 
