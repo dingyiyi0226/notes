@@ -24,6 +24,17 @@ Host alias
   User user
 ```
 
+### Proxy Server
+`ssh -J user@10.10.10.10:4000 user@192.168.0.10`
+
+```shell
+Host alias
+  HostName 192.168.0.10
+  ProxyJump 10.10.10.10:4000
+  User user
+
+```
+
 ### Forward Port
 
 `ssh -L 6000:localhost:5901 user@10.10.10.10 -p 4000`
@@ -38,21 +49,22 @@ Host alias
 
 ### Local Command
 
-Execute command on local machine
+`ssh -L 6000:localhost:5901 user@10.10.10.10 -p 4000 -o 'LocalCommand=echo "Connect localhost:6000'`
+
 
 ```shell
 Host alias
   HostName 10.10.10.10
   Port 4000
   LocalForward 6000 localhost:5901
-  LocalCommand echo "Connect VNC @ \033[0;33mvnc://localhost:6000\033[0m"
+  LocalCommand echo "Connect localhost:6000"
   PermitLocalCommand yes  # or set in General Rules section
   User user
 ```
 
 ### Remote Command
 
-Execute command on remote machine
+`ssh user@10.10.10.10 -p 4000 -t -o 'RemoteCommand=cd folder/ && bash -l'`
 
 ```shell
 Host alias
