@@ -150,7 +150,6 @@ $$
 下圖紅線為主體位置。可以看出在相同距離下，使用長焦鏡的物體放大率會更大。
 
 <img src="img/dslr/mag.png" alt="mag" style="width:60%;" />
-![mag](img/dslr/mag.png)
 
 ## Links
 
