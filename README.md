@@ -5,3 +5,4 @@
 3.  [Virtual box](virtualbox.md)
 4.  [Linux account](linux_account.md)
 5.  [SSH](ssh.md)
+6.  [DSLR](dslr.md)
