@@ -121,7 +121,7 @@ $$
 
 ## 超焦距
 
-當對焦在 $s = H$ 時，$D_F \to \infty$， $H$ 稱為超焦距
+當對焦在 $s = H$ 時， $D_F \to \infty$ ， $H$ 稱為超焦距
 
 $$
 D_f \to \infty, f^2+cNf-cNs = 0
