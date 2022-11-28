@@ -58,7 +58,7 @@ groups USER    # print the groups that USER is in
 
 ## Networking
 
-### Fixed IP
+### Static IP
 
 1.  For Ubuntu desktop (using network manager), modify `/etc/netplan/<something>.yaml`
 
