@@ -36,7 +36,7 @@ vboxmanage controlvm <vm> <acpipowerbutton|poweroff>    # recommend: acpipowerbu
 ### Import VM
 
 ```shell
-vboxmanage import <vm.ova> --vsys 0 --vmname <vm> [--dry-run]
+vboxmanage import <vm.ova> --vsys 0 --vmname <vm> --cpus <2> --memory <4096> [--dry-run]
 ```
 
 ### Delete VM
