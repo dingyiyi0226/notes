@@ -49,6 +49,7 @@ vboxmanage unregistervm <vm> --delete
 
 ```shell
 vboxmanage modifyvm <vm> --nic1 bridged --bridgeadapter1 eno1  # change nic1 to bridged mode and to eno1 interface
+vboxmanage modifyvm <vm> --nic1 hostonly --hostonlyadapter1 vboxnet0  # change nic1 to hostonly mode and to vboxnet0 interface
 ```
 
 ### VM Infos
