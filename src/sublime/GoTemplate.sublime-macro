@@ -1,0 +1,50 @@
+[
+	{
+		"args":
+		{
+			"characters": "package main\n\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "import \"fmt\"\n\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "func main() {\nfmt.Println(\"hello world\")\n\n}"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"by": "lines",
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "lines",
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args": null,
+		"command": "reindent"
+	}
+]

@@ -6,3 +6,4 @@
 4.  [Linux](linux.md)
 5.  [SSH](ssh.md)
 6.  [DSLR](dslr.md)
+7.  [Sublime](sublime.md)
